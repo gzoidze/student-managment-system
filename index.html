@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Statistic Management</title>
+    <link
+      rel="stylesheet"
+      href="style/fontawesome-free-5.15.4-web/css/all.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Statistic of Students Result</h1>
+      <div class="general-statistic">
+        <div class="total-days wrapper">
+          <span>Total Days</span>
+          <div>
+            <i class="fas fa-calendar-alt"></i>
+            <span id="total-days"></span>
+          </div>
+        </div>
+        <div class="missed-lessons wrapper">
+          <span>Missed Lessons</span>
+          <div>
+            <i class="far fa-calendar-times"></i>
+            <span id="missed-lessons"></span>
+          </div>
+        </div>
+        <div class="avarage-grade wrapper">
+          <span>Avarage Grade</span>
+          <div>
+            <i class="fas fa-medal"></i>
+            <span>0</span>
+          </div>
+        </div>
+        <div class="total-students wrapper">
+          <span>Total Students</span>
+          <div>
+            <i class="fas fa-user-friends"></i>
+            <span id="total-students"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="backdrop"></div>
+      <div class="add-student modal" id="add-student-modal">
+        <div class="modal__content">
+          <label for="student-name">Enter Student Name</label>
+          <input class="student-name" type="text" name="student-name" id="student-name" />
+        </div>
+        <div class="modal__actions">
+          <button class="btn-success">Add</button>
+          <button class="btn-passive">Cancel</button>
+        </div>
+      </div>
+      <div class="add-student-grade modal" id="add-grade-modal">
+        <div class="modal__content">
+          <label for="student-grade">Enter Student Grade</label>
+          <input class="student-grade" type="number" min="1" max="5" name="student-grade" id="student-grade" />
+        </div>
+        <div class="modal__actions">
+          <button class="btn-success btn-success-grade">Add</button>
+          <button class="btn-passive btn-passive-grade">Cancel</button>
+        </div>
+      </div>
+      <table id="table">
+        <caption>
+          <div class="table-title">
+            <span>Grade Table</span>
+          </div>
+          <div class="nav">
+            <button class="add-student" id="add-student">
+              <i class="fas fa-plus-circle"></i>
+              <i class="fas fa-user-graduate"></i>
+              <span>Add Student</span>
+            </button>
+            <button class="add-day" id='add-day'>
+              <i class="fas fa-calendar-plus"></i>
+              <span>Add Day</span>
+            </button>
+            <button class="remove-student">
+              <i class="fas fa-minus-circle"></i>
+              <i class="fas fa-user-graduate"></i>
+              <span>Remove Student</span>
+            </button>
+            <button class="remove-day">
+              <i class="fas fa-calendar-minus"></i>
+              <span>Remove day</span>
+            </button>
+          </div>
+        </caption>
+        <tr id="table-head">
+          <th>Student</th>
+          <th>Avarage</th>
+        </tr>
+        
+      </table>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #00ff80;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+  padding: 1em 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0;
+}
+
+.general-statistic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+.general-statistic .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5em;
+  width: 24%;
+  height: 2em;
+}
+
+.general-statistic .wrapper div {
+  display: inline-block;
+}
+
+.fa-calendar-alt {
+  color: green;
+}
+
+.fa-calendar-times {
+  color: red;
+}
+
+.fa-medal {
+  color: orange;
+}
+
+.fa-user-friends {
+  color: blue;
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+
+table {
+  display: block;
+  width: 100%;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+table caption {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 3em;
+  background-color: white;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+table caption .table-title{
+  font-size: 1.5em;
+  color: #11bfbc;
+  width: 20%;
+  /* background-color: blueviolet; */
+}
+
+table caption .nav{
+  display: flex;
+  justify-content: flex-start;
+  width: 65%;
+  /* background-color: green; */
+}
+
+table caption .nav button{
+  width: 12em;
+  height: 2.2em;
+  border-radius: 0.5em;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+table caption .nav button span{
+  margin-left: 0.5em;
+  font-size: 1em;
+}
+
+table caption .nav .add-student{
+  background-color: blue;
+}
+table caption .nav .add-day{
+  background-color: green;
+}
+
+table caption .nav .remove-student{
+  display: none;
+  background-color: red;
+}
+
+table caption .nav  .remove-day{
+  background-color: red;
+  display: none;
+}
+
+th, td{
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+table th {
+  background: darkslategray;
+  color: white;
+  font-weight: 300;
+}
+
+table td{
+  color: white;
+}
+
+/* .student-name{
+  background-color: gray;
+} */
+
+.red{
+  background-color: red;
+}
+
+.gray{
+  background-color: gray;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  background: #00ff80;
+  border-radius: 0.75em;
+  width: 20%;
+  height: 20vh;
+  top: 30vh;
+  left: 40%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+}
+
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.modal .modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70%;
+  color: white;
+  width: 80%;
+  margin: auto;
+}
+
+.modal .modal__content input{
+  width: 100%;
+  height: 2em;
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+}
+
+.modal .modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.modal .modal__actions button{
+  margin-left: 1em;
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+  height: 2em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .modal__actions .btn-success {
+  background-color: green;
+}
+
+.modal .modal__actions .btn-passive {
+  background-color: red;
+}
+
+
+@keyframes fade-slide-in {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
