@@ -6,10 +6,10 @@
     <title>Student Statistic Management</title>
     <link
       rel="stylesheet"
-      href="style/fontawesome-free-5.15.4-web/css/all.css"
+      href="./assets/style/fontawesome-free-5.15.4-web/css/all.css"
     />
-    <link rel="stylesheet" href="style/style.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script type="module" src="./assets/scripts/app.js"></script>
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
           <span>Avarage Grade</span>
           <div>
             <i class="fas fa-medal"></i>
-            <span>0</span>
+            <span id="total-avarage"></span>
           </div>
         </div>
         <div class="total-students wrapper">
@@ -47,10 +47,16 @@
     </header>
     <main>
       <div id="backdrop"></div>
+      <div id="grade-backdrop"></div>
       <div class="add-student modal" id="add-student-modal">
         <div class="modal__content">
           <label for="student-name">Enter Student Name</label>
-          <input class="student-name" type="text" name="student-name" id="student-name" />
+          <input
+            class="student-name"
+            type="text"
+            name="student-name"
+            id="student-name"
+          />
         </div>
         <div class="modal__actions">
           <button class="btn-success">Add</button>
@@ -60,7 +66,14 @@
       <div class="add-student-grade modal" id="add-grade-modal">
         <div class="modal__content">
           <label for="student-grade">Enter Student Grade</label>
-          <input class="student-grade" type="number" min="1" max="5" name="student-grade" id="student-grade" />
+          <input
+            class="student-grade"
+            type="number"
+            min="1"
+            max="5"
+            name="student-grade"
+            id="student-grade"
+          />
         </div>
         <div class="modal__actions">
           <button class="btn-success btn-success-grade">Add</button>
@@ -78,7 +91,7 @@
               <i class="fas fa-user-graduate"></i>
               <span>Add Student</span>
             </button>
-            <button class="add-day" id='add-day'>
+            <button class="add-day" id="add-day">
               <i class="fas fa-calendar-plus"></i>
               <span>Add Day</span>
             </button>
@@ -97,7 +110,6 @@
           <th>Student</th>
           <th>Avarage</th>
         </tr>
-        
       </table>
     </main>
   </body>

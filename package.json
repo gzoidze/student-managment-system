@@ -1,0 +1,25 @@
+{
+  "name": "student-managment-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzoidze/student-managment-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gzoidze/student-managment-system/issues"
+  },
+  "homepage": "https://github.com/gzoidze/student-managment-system#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

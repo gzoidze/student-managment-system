@@ -87,21 +87,19 @@ table caption {
   border-top-right-radius: 0.5em;
 }
 
-table caption .table-title{
+table caption .table-title {
   font-size: 1.5em;
   color: #11bfbc;
   width: 20%;
-  /* background-color: blueviolet; */
 }
 
-table caption .nav{
+table caption .nav {
   display: flex;
   justify-content: flex-start;
   width: 65%;
-  /* background-color: green; */
 }
 
-table caption .nav button{
+table caption .nav button {
   width: 12em;
   height: 2.2em;
   border-radius: 0.5em;
@@ -111,29 +109,30 @@ table caption .nav button{
   margin-right: 2em;
 }
 
-table caption .nav button span{
+table caption .nav button span {
   margin-left: 0.5em;
   font-size: 1em;
 }
 
-table caption .nav .add-student{
+table caption .nav .add-student {
   background-color: blue;
 }
-table caption .nav .add-day{
+table caption .nav .add-day {
   background-color: green;
 }
 
-table caption .nav .remove-student{
+table caption .nav .remove-student {
   display: none;
   background-color: red;
 }
 
-table caption .nav  .remove-day{
+table caption .nav .remove-day {
   background-color: red;
   display: none;
 }
 
-th, td{
+th,
+td {
   border: 2px solid transparent;
   text-align: center;
 }
@@ -144,20 +143,25 @@ table th {
   font-weight: 300;
 }
 
-table td{
+table td {
   color: white;
 }
 
-/* .student-name{
-  background-color: gray;
-} */
-
-.red{
+.red {
   background-color: red;
 }
 
-.gray{
+.cell-background {
   background-color: gray;
+}
+
+.student-column {
+  background-color: darkslategray;
+  text-align: left;
+}
+
+.grade-one {
+  background-color: "#FFA500" !important;
 }
 
 #backdrop {
@@ -206,7 +210,7 @@ table td{
   margin: auto;
 }
 
-.modal .modal__content input{
+.modal .modal__content input {
   width: 100%;
   height: 2em;
   border: 1px solid transparent;
@@ -221,7 +225,7 @@ table td{
   margin: auto;
 }
 
-.modal .modal__actions button{
+.modal .modal__actions button {
   margin-left: 1em;
   border: 1px solid transparent;
   border-radius: 0.2em;
@@ -238,7 +242,6 @@ table td{
 .modal .modal__actions .btn-passive {
   background-color: red;
 }
-
 
 @keyframes fade-slide-in {
   from {
