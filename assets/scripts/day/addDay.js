@@ -2,9 +2,11 @@ import { days, tableBody } from "../app.js";
 import { getFormatedDate } from "../dateFormat.js";
 import { removeDayButton } from "./removeDay.js";
 import { onGradeChange } from "../studentGrade/addNewGrade.js";
-import { studentAavarage, allStudentAavarage } from "../studentGrade/avarage.js";
+import {
+  studentAavarage,
+  allStudentAavarage,
+} from "../studentGrade/avarage.js";
 import { totalMissedLessons } from "../missedLessons.js";
-
 
 export const addDayButton = document.getElementById("add-day");
 let totalDays = document.getElementById("total-days");
@@ -37,8 +39,8 @@ export const addDayhandler = () => {
 
     newTH.innerHTML = getFormatedDate(currentDate);
     newTD.innerHTML = initialCellValue;
-    currentDate.setDate(currentDate.getDate() + 1);
   }
+  currentDate.setDate(currentDate.getDate() + 1);
   days.push(table);
   let cellCount = table.rows[0].cells.length;
   const cells = document.querySelectorAll("td");
