@@ -44,9 +44,9 @@ header h1 {
   height: 2em;
 }
 
-.general-statistic .wrapper div {
+/* .general-statistic .wrapper div {
   display: inline-block;
-}
+} */
 
 .fa-calendar-alt {
   color: green;
@@ -100,7 +100,7 @@ table caption .nav {
 }
 
 table caption .nav button {
-  width: 12em;
+  width: 10rem;
   height: 2.2em;
   border-radius: 0.5em;
   border: 1px solid transparent;
@@ -249,5 +249,50 @@ table td {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .general-statistic {
+    justify-content: space-evenly;
+    height: 5rem;
+  }
+  .general-statistic .wrapper {
+    width: 45%;
+  }
+  table caption {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  table caption .table-title {
+    width: 100%;
+  }
+
+  table caption .nav {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  table caption .nav button {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .general-statistic {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 10rem;
+  }
+  .general-statistic .wrapper {
+    width: 100%;
+  }
+
+  table caption .nav button {
+    width: 80%;
   }
 }
