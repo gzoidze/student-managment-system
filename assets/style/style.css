@@ -186,8 +186,8 @@ table td {
   z-index: 100;
   background: #00ff80;
   border-radius: 0.75em;
-  width: 25%;
-  height: 20vh;
+  width: 20%;
+  height: 25vh;
   top: 30vh;
   left: 40%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -286,6 +286,7 @@ table td {
   .modal {
     width: 40%;
     left: 30%;
+    height: 20vh;
   }
 }
 

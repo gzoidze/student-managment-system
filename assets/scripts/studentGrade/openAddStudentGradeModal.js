@@ -1,8 +1,9 @@
-import { toggleBackDropModal } from "../backdrop/toggleBackDropModal.js";
+// import { toggleBackDropModal } from "../backdrop/toggleBackDropModal.js";
 import { closeAddStudentGradeModal } from "./closeAddStudentGradeModal.js";
 import { removeBackDrop } from "../backdrop/removeBackDrop.js";
 import { studentAavarage, allStudentAavarage } from "./avarage.js";
 import { totalMissedLessons } from "../missedLessons.js";
+import { backDrop } from "../backdrop/toggleBackDropModal.js";
 
 const addStudentGradeModal = document.getElementById("add-grade-modal");
 
@@ -15,7 +16,11 @@ let cell = null;
 
 export const openStudentGradeModal = (c) => {
   addStudentGradeModal.classList.add("visible");
-  toggleBackDropModal();
+  // toggleBackDropModal();
+  if (backDrop) {
+    backDrop.classList.add("visible");
+  }
+  // console.log(backDrop);
   cell = c;
 };
 
