@@ -186,7 +186,7 @@ table td {
   z-index: 100;
   background: #00ff80;
   border-radius: 0.75em;
-  width: 20%;
+  width: 25%;
   height: 20vh;
   top: 30vh;
   left: 40%;
@@ -252,14 +252,7 @@ table td {
   }
 }
 
-@media (max-width: 768px) {
-  .general-statistic {
-    justify-content: space-evenly;
-    height: 5rem;
-  }
-  .general-statistic .wrapper {
-    width: 45%;
-  }
+@media (max-width: 900px) {
   table caption {
     flex-direction: column;
     height: auto;
@@ -282,6 +275,20 @@ table td {
   }
 }
 
+@media (max-width: 768px) {
+  .general-statistic {
+    justify-content: space-evenly;
+    height: 5rem;
+  }
+  .general-statistic .wrapper {
+    width: 45%;
+  }
+  .modal {
+    width: 40%;
+    left: 30%;
+  }
+}
+
 @media (max-width: 480px) {
   .general-statistic {
     justify-content: space-evenly;
@@ -294,5 +301,9 @@ table td {
 
   table caption .nav button {
     width: 80%;
+  }
+  .modal {
+    width: 50%;
+    left: 25%;
   }
 }
